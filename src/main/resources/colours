@@ -1,4 +1,4 @@
 blue
 green = blue
-yellow = white
+yellow = white = green
 purple
