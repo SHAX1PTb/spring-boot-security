@@ -15,6 +15,17 @@ class LinkedList {
         } // Constructor
     }
 
+    /* This function prints contents of linked list starting from head */
+    public void printList()
+    {
+        Node n = head;
+        while (n != null) {
+            System.out.print(n.data + " ");
+            n = n.next;
+        }
+    }
+
+
     /* method to create a simple linked list with 3 nodes*/
     public static void main(String[] args)
     {
@@ -28,6 +39,8 @@ class LinkedList {
         llist.head.next = second; // Link first node with the second node
 
         second.next = third; // Link second node with the third node
+
+        llist.printList();
 
 
 

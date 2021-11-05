@@ -2,7 +2,7 @@ package io.javabrains.springbootsecurity;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class test10 {
+public class Iterator_validation {
 
     public static void main(String[] args) {
 
