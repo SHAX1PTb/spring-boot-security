@@ -18,8 +18,8 @@ public class LongestCharecter {
                 j = Math.max(j,map.get(a.charAt(i))+1);
             }
             map.put(a.charAt(i),i);
-            System.out.println("i"+i);
-            System.out.println("j"+j);
+//            System.out.println("i"+i);
+//            System.out.println("j"+j);
             max = Math.max(max,i-j+1);
 
 

@@ -1,8 +1,13 @@
 package io.javabrains.springbootsecurity;
 
+import org.junit.Assert;
+import org.springframework.core.task.support.ExecutorServiceAdapter;
+
+import java.util.concurrent.*;
+
 public class Util {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         String name = "Shankar";
 
@@ -11,6 +16,13 @@ public class Util {
         Thread thread = new Thread(multiThreading);
         thread.start();
         thread.run();
+
+
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        Future<Integer> future = executorService.submit(new callable(1));
+
+        Assert.assertEquals(2,future.get().intValue());
+
 
     }
 }
