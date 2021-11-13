@@ -9,9 +9,9 @@ public class MaxIntegerTest  {
     @Test
     public void maxIntegerTest(){
 
-        MaxInteger maxInteger = new MaxInteger();
+        MaxInteger maxInteger1 = new MaxInteger();
 
-        String result = maxInteger.maxValue("-13",2);
+        String result = maxInteger1.maxValue("-13",2);
         System.out.println(result);
       //  Assert.assertEquals(0,result);
     }

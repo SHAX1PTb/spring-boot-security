@@ -16,7 +16,7 @@ public class anagram {
         Arrays.sort(bb);
 
        int cc =Arrays.compare(aa,bb);
-        if(cc ==0){
+        if(cc == 0){
             System.out.println("true");
         } else{
             System.out.println("false");

@@ -2,7 +2,7 @@ package io.javabrains.springbootsecurity;
 
 public class MaxInteger {
 
-    public String maxValue(String n, int x) {
+       String maxValue(String n, int x) {
 
         boolean isNegetive = false;
         if (n.charAt(0) == '-') {

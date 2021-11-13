@@ -1,6 +1,6 @@
 package io.javabrains.springbootsecurity;
 
-public class app {
+public class disjoint {
 
     public static void main(String[] args) {
         UnionFind uf = new UnionFind(10);

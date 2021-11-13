@@ -26,11 +26,11 @@ public class Employee implements Comparable<Employee> {
     public int compareTo(Employee o) {
 
         Integer compare = this.getFirstName().compareTo(o.getFirstName());
-        if(compare ==0) {
-            compare = Integer.compare(this.getAge(),o.getAge());
+        if (compare == 0) {
+            compare = Integer.compare(this.getAge(), o.getAge());
         }
 
-        return  compare;
+        return compare;
     }
 
     public String getFirstName() {
