@@ -10,7 +10,7 @@ import java.lang.reflect.Executable;
 import java.util.*;
 
 import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertThrows;
+
 
 public class PalindromeLinkedListTest implements Runnable {
     List<Integer> list = new ArrayList<>();
