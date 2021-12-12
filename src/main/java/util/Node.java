@@ -1,9 +1,14 @@
 package util;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public class Node {
 
+    public final Log log = LogFactory.getLog(Node.class);
 
     public static class ListNode {
+        public final Log log = LogFactory.getLog(ListNode.class);
         public ListNode head = null;
         public ListNode tail = null;
         int val;
@@ -29,6 +34,20 @@ public class Node {
                 tail.next = newNode;
             }
             tail = newNode;
+        }
+
+        public void display(){
+            ListNode current = head;
+            if(head == null){
+                log.info("List is empty !");
+                return;
+            }
+
+            log.info("Number of Singly linked List: ");
+            while (current != null){
+                log.info(current.val+" ");
+                current = current.next;
+            }
         }
     }
 
