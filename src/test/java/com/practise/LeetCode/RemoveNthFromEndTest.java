@@ -1,14 +1,14 @@
 package com.practise.LeetCode;
 
 import org.junit.Test;
-import util.Node;
+import util.DoubleLinkedList;
 
 public class RemoveNthFromEndTest {
 
     @Test
     public void removeNthElement(){
 
-        Node.ListNode a = new Node.ListNode();
+        DoubleLinkedList.ListNode a = new DoubleLinkedList.ListNode();
         a.addNode(1);
         a.addNode(2);
         a.addNode(3);
