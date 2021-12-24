@@ -1,13 +1,12 @@
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class NonRepetingTest {
+public class GoldManSachs2Test {
 
     @Test
     public void nonRepeatTest(){
 
-        NonRepeting nonRepeting = new NonRepeting();
+        GoldManSachs_2 nonRepeting = new GoldManSachs_2();
 
         ;
         Assert.assertEquals("d",nonRepeting.nonRepetingChar("aabbccd"));

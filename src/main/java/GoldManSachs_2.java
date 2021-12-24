@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class NonRepeting {
+public class GoldManSachs_2 {
 
   public String nonRepetingChar(String s) {
 
