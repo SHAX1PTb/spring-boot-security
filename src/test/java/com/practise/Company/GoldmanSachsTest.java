@@ -1,8 +1,8 @@
-import junit.framework.TestCase;
+package com.practise.Company;
+
+import com.practise.Company.GoldmanSachs;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.Optional;
 
 public class GoldmanSachsTest {
 

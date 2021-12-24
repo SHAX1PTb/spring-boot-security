@@ -1,3 +1,5 @@
+package com.practise.Company;
+
 import java.util.HashMap;
 import java.util.Map;
 

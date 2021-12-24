@@ -1,3 +1,5 @@
+package com.practise.Company;
+
 public class TwoSum {
 
     public static void main(String[] args) {

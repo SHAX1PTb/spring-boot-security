@@ -1,3 +1,5 @@
+package com.practise.Company;
+
 public class SquareRoot {
 
   public Integer calSquareRoot(Integer x) {

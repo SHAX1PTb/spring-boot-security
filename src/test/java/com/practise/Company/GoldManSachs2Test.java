@@ -1,3 +1,6 @@
+package com.practise.Company;
+
+import com.practise.Company.GoldManSachs_2;
 import org.junit.Assert;
 import org.junit.Test;
 
