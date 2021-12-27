@@ -137,8 +137,32 @@ class Solution2 {
             switch (action) {
 
                 case "updateParagraph":
-                case "addParagraph":
+                    deltaUpdate.remove(deltas[i].getParagraphIndex());
                     deltaUpdate.add(deltas[i].getParagraphIndex(), deltas[i].getParagraph().getText());
+                    break;
+                case "addParagraph":
+                    var temp_start = deltaUpdate.subList(0,deltas[i].getParagraphIndex()+1);
+                    var temp_end = new ArrayList<>(deltaUpdate.subList(deltas[i].getParagraphIndex()+1,deltaUpdate.size()));
+
+                    System.out.println("temp_start"+temp_start);
+                    System.out.println("temp_end"+temp_end);
+
+                    deltaUpdate.addAll(temp_start);
+                    deltaUpdate.add(deltas[i].getParagraphIndex(), "\\n "+deltas[i].getParagraph().getText());
+
+
+//                    Iterator<String> iterator = temp_end.iterator();
+//
+//                    while(iterator.hasNext()){
+//                        deltaUpdate.add(iterator.next());
+//                    }
+
+
+                    for (String value : temp_end) {
+                        deltaUpdate.add(value);
+                    }
+
+
                     break;
 
                 case "deleteParagraph":
@@ -150,7 +174,13 @@ class Solution2 {
             System.out.println(deltaUpdate.toString());
         }
 
+        StringBuilder sp = new StringBuilder();
+        for(int i =0 ; i < deltaUpdate.size();i++){
 
-        return ss.toString();
+            sp.append(deltaUpdate.get(i));
+        }
+
+
+        return sp.toString();
     }
 }
