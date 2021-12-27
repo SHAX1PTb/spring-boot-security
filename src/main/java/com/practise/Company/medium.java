@@ -66,6 +66,8 @@ class Solution {
     List<Paragraph> p = new ArrayList<>();
     List<Integer> integers = new ArrayList<>();
 
+    StringBuilder ss = new StringBuilder();
+
     for (int i = 0; i < postContent.sections.length; i++) {
       s.add(postContent.sections[i]);
     }
@@ -83,17 +85,28 @@ class Solution {
     for (int i = 0; i < integers.size() - 1; i++) {
 
       while (k < integers.get(i + 1)) {
-        System.out.println(p.get(k).getText());
+       // System.out.println(p.get(k).getText());
+        ss.append(p.get(k).getText());
+        ss.append("\n");
         k++;
       }
-      System.out.println("---");
+    //  System.out.println("---");
+      ss.append("-");
+      ss.append("\n");
     }
 
     for (int z = k; z < p.size(); z++) {
 
-      System.out.println(p.get(z).getText());
+   //   System.out.println("z"+(p.size()-1));
+ //     System.out.println(p.get(z).getText());
+    //  System.out.println(p.get(z).text+"\n");
+      ss.append(p.get(z).text);
+      if(z !=(p.size()-1)){
+        ss.append("\n");
+      }
     }
 
-    return postContentString;
+    System.out.println(ss.toString());
+    return ss.toString();
   }
 }

@@ -10,6 +10,8 @@ package util;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import java.util.List;
+
 /***
  *
  */
@@ -17,6 +19,7 @@ public class LinkedList {
     public static final Log log = LogFactory.getLog(LinkedList.class);
 
     Node head;
+
 
     public void insert(int data) {
         Node node = new Node();
@@ -88,7 +91,28 @@ public class LinkedList {
             n1 = n.next;
             n.next = n1.next;
             log.info("n1 is delete "+ n1.data);
+            n1 = null;
         }
 
+    }
+
+    public Integer Length(){
+        Node node = head;
+        Integer count = 0;
+        while(node.next != null ){
+            count = count+1;
+            node = node.next;
+        }
+        count = count+1;
+
+        log.info("Count:"+count);
+        return count;
+    }
+    public LinkedList removeNthFromEnd(LinkedList head, int n) {
+
+        LinkedList start = new LinkedList();
+
+
+        return head;
     }
 }

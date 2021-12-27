@@ -2,7 +2,7 @@ package io.javabrains.springbootsecurity;
 
 public class WalmartLabs {
 
-  //    Given the head of a linked list, remove the nth node from the end of the list and return its
+  //    Given the head of a linked list, remove the nth node from the end of the list and return its
   // head.
   //    Example 1:
   //    Input: head = [1,2,3,4,5], n = 2
