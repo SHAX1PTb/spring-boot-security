@@ -81,6 +81,7 @@ class Solution2 {
         StringBuilder ss = new StringBuilder();
         //Map<Integer,String> deltaUpdate = new LinkedHashMap<>();
         List<String> deltaUpdate = new ArrayList<>();
+        List<String> deltaAfterUpdate = new ArrayList<>();
 
         for (int i = 0; i < postContent.sections.length; i++) {
             s.add(postContent.sections[i]);
@@ -137,6 +138,7 @@ class Solution2 {
             switch (action) {
 
                 case "updateParagraph":
+
                     deltaUpdate.remove(deltas[i].getParagraphIndex());
                     deltaUpdate.add(deltas[i].getParagraphIndex(), deltas[i].getParagraph().getText());
                     break;
@@ -147,8 +149,13 @@ class Solution2 {
                     System.out.println("temp_start"+temp_start);
                     System.out.println("temp_end"+temp_end);
 
-                    deltaUpdate.addAll(temp_start);
-                    deltaUpdate.add(deltas[i].getParagraphIndex(), "\\n "+deltas[i].getParagraph().getText());
+                    deltaAfterUpdate.addAll(temp_start);
+                    deltaAfterUpdate.add(deltas[i].getParagraphIndex(), "\\n "+deltas[i].getParagraph().getText());
+                    var tenp_add ="\\n "+deltas[i].getParagraph().getText();
+                    System.out.println("tenp_add:"+tenp_add);
+                    System.out.println("index:"+deltas[i].getParagraphIndex());
+
+                    deltaAfterUpdate.addAll(temp_end);
 
 
 //                    Iterator<String> iterator = temp_end.iterator();
@@ -158,9 +165,9 @@ class Solution2 {
 //                    }
 
 
-                    for (String value : temp_end) {
-                        deltaUpdate.add(value);
-                    }
+//                    for (String value : temp_end) {
+//                        deltaUpdate.add(value);
+//                    }
 
 
                     break;
@@ -171,7 +178,7 @@ class Solution2 {
 
             }
 
-            System.out.println(deltaUpdate.toString());
+            System.out.println(deltaAfterUpdate.toString());
         }
 
         StringBuilder sp = new StringBuilder();
