@@ -151,6 +151,6 @@ class Solution2 {
         }
 
 
-        return ss.toString();
+        return deltaUpdate.toString();
     }
 }
