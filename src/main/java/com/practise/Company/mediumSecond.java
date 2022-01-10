@@ -81,6 +81,7 @@ class Solution2 {
         StringBuilder ss = new StringBuilder();
         //Map<Integer,String> deltaUpdate = new LinkedHashMap<>();
         List<String> deltaUpdate = new ArrayList<>();
+        List<String> deltaAfterUpdate = new ArrayList<>();
 
         for (int i = 0; i < postContent.sections.length; i++) {
             s.add(postContent.sections[i]);
@@ -151,6 +152,6 @@ class Solution2 {
         }
 
 
-        return deltaUpdate.toString();
+        return ss.toString();
     }
 }

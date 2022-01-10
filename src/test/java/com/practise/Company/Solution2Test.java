@@ -27,7 +27,7 @@ public class Solution2Test {
                 "\t\"type\": \"addParagraph\",\n" +
                 "\t\"paragraphIndex\": 1,\n" +
                 "\t\"paragraph\": {\n" +
-                "\t\t\"text\": \"aaaAAA\"\n" +
+                "\t\t\"text\": \"new\"\n" +
                 "\t}\n" +
                 "}]";
 
@@ -38,7 +38,7 @@ public class Solution2Test {
                 "\t\t\"text\": \"aaaAAA\"\n" +
                 "\t}\n" +
                 "}]";
-        Solution2.solution(message,deltasDelete);
+        Solution2.solution(message,deltasAdd);
 
     }
 
